@@ -11,7 +11,7 @@ const useFetchRestaurants = (lat, lng) => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    `http://localhost:3001/api/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}`
+                    `https://proxy-server-t6hm.onrender.com/api/dapi/restaurants/list/v5?lat=${lat}&lng=${lng}`
                 );
                 const data = response.data;
 
