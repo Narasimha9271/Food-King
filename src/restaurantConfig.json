@@ -1,0 +1,39 @@
+[
+    {
+        "type": "card",
+        "fields": [
+            {
+                "field": "cloudinaryImageId",
+                "label": "Image"
+            },
+            {
+                "field": "name",
+                "label": "Name"
+            },
+            {
+                "field": "locality",
+                "label": "Locality"
+            },
+            {
+                "field": "areaName",
+                "label": "Area"
+            },
+            {
+                "field": "costForTwo",
+                "label": "Cost for Two"
+            },
+            {
+                "field": "cuisines",
+                "label": "Cuisines"
+            },
+            {
+                "field": "avgRating",
+                "label": "Average Rating"
+            },
+            {
+                "field": "deliveryTime",
+                "label": "Delivery Time"
+            }
+        ]
+    }
+]

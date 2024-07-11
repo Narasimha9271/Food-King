@@ -1,0 +1,14 @@
+{
+    "projects": {
+        "default": "food-king-cc8b3"
+    },
+    "targets": {
+        "food-king-cc8b3": {
+            "hosting": {
+                "foodking-narasimha": [
+                    "foodking-narasimha"
+                ]
+            }
+        }
+    }
+}
