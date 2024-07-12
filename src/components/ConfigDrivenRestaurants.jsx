@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
-import SearchBar from "./Searchbar";
+import SearchBar from "./SearchBar";
 import RestaurantCard from "./RestaurantCard";
 
 const ConfigDrivenRestaurants = ({ restaurants }) => {
