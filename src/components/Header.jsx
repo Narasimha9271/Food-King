@@ -32,27 +32,27 @@ const Header = ({
     };
 
     return (
-        <header className="bg-yellow-300 text-white shadow-md sticky top-0 z-50">
+        <header className="bg-yellow-400 text-white shadow-md sticky top-0 z-50">
             <div className="container mx-auto flex justify-between items-center py-4 px-6">
-                <Link to="/" className="text-3xl font-bold">
+                <Link to="/" className="text-3xl font-bold text-white">
                     Food King
                 </Link>
                 <nav className="hidden md:flex space-x-6">
                     <Link
                         to="/"
-                        className="hover:text-gray-300 transition duration-300"
+                        className="hover:text-gray-600 transition duration-300 text-lg"
                     >
                         Home
                     </Link>
                     <Link
                         to="/about"
-                        className="hover:text-gray-300 transition duration-300"
+                        className="hover:text-gray-600 transition duration-300 text-lg"
                     >
                         About Us
                     </Link>
                     <Link
                         to="/help"
-                        className="hover:text-gray-300 transition duration-300"
+                        className="hover:text-gray-600 transition duration-300 text-lg"
                     >
                         Help
                     </Link>
@@ -61,7 +61,7 @@ const Header = ({
                             <select
                                 value={selectedLanguage}
                                 onChange={handleLanguageChange}
-                                className="bg-gray-600 text-white border-none outline-none mt-2"
+                                className="bg-yellow-500 text-white border-none outline-none py-2 px-4 rounded"
                             >
                                 <option value="en">English</option>
                                 <option value="tl">Telugu</option>
@@ -70,7 +70,7 @@ const Header = ({
                             </select>
                             <button
                                 onClick={handleLogout}
-                                className="hover:text-gray-300 transition duration-300"
+                                className="hover:text-gray-600 transition duration-300 text-lg mb-2"
                             >
                                 Logout
                             </button>
@@ -79,13 +79,13 @@ const Header = ({
                         <>
                             <Link
                                 to="/login"
-                                className="hover:text-gray-300 transition duration-300"
+                                className="hover:text-gray-600 transition duration-300 text-lg"
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/signup"
-                                className="hover:text-gray-300 transition duration-300"
+                                className="hover:text-gray-600 transition duration-300 text-lg"
                             >
                                 Sign Up
                             </Link>
@@ -94,31 +94,31 @@ const Header = ({
                 </nav>
                 <button className="md:hidden" onClick={toggleMenu}>
                     {menuOpen ? (
-                        <XIcon className="h-6 w-6" />
+                        <XIcon className="h-6 w-6 text-white" />
                     ) : (
-                        <MenuIcon className="h-6 w-6" />
+                        <MenuIcon className="h-6 w-6 text-white" />
                     )}
                 </button>
             </div>
             {menuOpen && (
-                <nav className="md:hidden flex flex-col items-center space-y-6 py-4 bg-yellow-300 text-center">
+                <nav className="md:hidden flex flex-col items-center space-y-6 py-4 bg-yellow-400 text-center">
                     <Link
                         to="/"
-                        className="hover:text-gray-300 transition duration-300"
+                        className="hover:text-gray-600 transition duration-300 text-lg"
                         onClick={toggleMenu}
                     >
                         Home
                     </Link>
                     <Link
                         to="/about"
-                        className="hover:text-gray-300 transition duration-300"
+                        className="hover:text-gray-600 transition duration-300 text-lg"
                         onClick={toggleMenu}
                     >
                         About Us
                     </Link>
                     <Link
                         to="/help"
-                        className="hover:text-gray-300 transition duration-300"
+                        className="hover:text-gray-600 transition duration-300 text-lg"
                         onClick={toggleMenu}
                     >
                         Help
@@ -128,7 +128,7 @@ const Header = ({
                             <select
                                 value={selectedLanguage}
                                 onChange={handleLanguageChange}
-                                className="bg-gray-600 text-white border-none outline-none mt-2"
+                                className="bg-yellow-500 text-white border-none outline-none py-2 px-4 rounded"
                             >
                                 <option value="en">English</option>
                                 <option value="tl">Telugu</option>
@@ -137,7 +137,7 @@ const Header = ({
                             </select>
                             <button
                                 onClick={handleLogout}
-                                className="hover:text-gray-300 transition duration-300"
+                                className="hover:text-gray-600 transition duration-300 text-lg"
                             >
                                 Logout
                             </button>
@@ -146,14 +146,14 @@ const Header = ({
                         <>
                             <Link
                                 to="/login"
-                                className="hover:text-gray-300 transition duration-300"
+                                className="hover:text-gray-600 transition duration-300 text-lg"
                                 onClick={toggleMenu}
                             >
                                 Login
                             </Link>
                             <Link
                                 to="/signup"
-                                className="hover:text-gray-300 transition duration-300"
+                                className="hover:text-gray-600 transition duration-300 text-lg"
                                 onClick={toggleMenu}
                             >
                                 Sign Up
