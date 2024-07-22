@@ -61,7 +61,7 @@ const Header = ({
                             <select
                                 value={selectedLanguage}
                                 onChange={handleLanguageChange}
-                                className="bg-yellow-500 text-white border-none outline-none py-2 px-4 rounded"
+                                className="bg-yellow-500 text-white border-none outline-none py-2 px-2 rounded"
                             >
                                 <option value="en">English</option>
                                 <option value="tl">Telugu</option>

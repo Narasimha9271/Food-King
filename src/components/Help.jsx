@@ -8,7 +8,10 @@ const Help = () => {
 
     return (
         <>
-            <div className="text-5xl font-semibold ml-72 mt-10">FAQ</div>
+            <div className="text-3xl md:text-5xl font-semibold ml-4 md:ml-72 mt-10">
+                FAQ
+            </div>
+
             <div className="max-w-3xl mx-auto mt-8">
                 {data.map((item, index) => (
                     <AccordionItem

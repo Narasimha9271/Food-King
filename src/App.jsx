@@ -22,7 +22,13 @@ const App = () => {
                 setSelectedLanguage={setSelectedLanguage}
             />
             <Routes>
-                <Route path="/" element={<Home />} />
+                <Route
+                    element={
+                        <ProtectedRoute isAuthenticated={isAuthenticated} />
+                    }
+                >
+                    <Route path="/" element={<Home />} />
+                </Route>
                 <Route path="/help" element={<Help />} />
                 <Route
                     path="/login"
