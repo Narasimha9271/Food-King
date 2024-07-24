@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
-import About from "./components/About";
-import Home from "./components/Home";
+
 import Login from "./components/Login";
 import SignUp from "./components/SignUp";
 import ProtectedRoute from "./components/ProtectedRoute";
 import Help from "./components/Help";
 import Footer from "./components/Footer";
+
+const About = lazy(() => import("./components/About"));
+const Home = lazy(() => import("./components/Home"));
 
 const App = () => {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -21,34 +23,42 @@ const App = () => {
                 selectedLanguage={selectedLanguage}
                 setSelectedLanguage={setSelectedLanguage}
             />
-            <Routes>
-                <Route
-                    element={
-                        <ProtectedRoute isAuthenticated={isAuthenticated} />
-                    }
-                >
-                    <Route path="/" element={<Home />} />
-                </Route>
-                <Route path="/help" element={<Help />} />
-                <Route
-                    path="/login"
-                    element={<Login setIsAuthenticated={setIsAuthenticated} />}
-                />
-                <Route
-                    path="/signup"
-                    element={<SignUp setIsAuthenticated={setIsAuthenticated} />}
-                />
-                <Route
-                    element={
-                        <ProtectedRoute isAuthenticated={isAuthenticated} />
-                    }
-                >
+            <Suspense fallback={<div>Loading...</div>}>
+                <Routes>
                     <Route
-                        path="/about"
-                        element={<About selectedLanguage={selectedLanguage} />}
+                        element={
+                            <ProtectedRoute isAuthenticated={isAuthenticated} />
+                        }
+                    >
+                        <Route path="/" element={<Home />} />
+                    </Route>
+                    <Route path="/help" element={<Help />} />
+                    <Route
+                        path="/login"
+                        element={
+                            <Login setIsAuthenticated={setIsAuthenticated} />
+                        }
                     />
-                </Route>
-            </Routes>
+                    <Route
+                        path="/signup"
+                        element={
+                            <SignUp setIsAuthenticated={setIsAuthenticated} />
+                        }
+                    />
+                    <Route
+                        element={
+                            <ProtectedRoute isAuthenticated={isAuthenticated} />
+                        }
+                    >
+                        <Route
+                            path="/about"
+                            element={
+                                <About selectedLanguage={selectedLanguage} />
+                            }
+                        />
+                    </Route>
+                </Routes>
+            </Suspense>
             <Footer />
         </Router>
     );
