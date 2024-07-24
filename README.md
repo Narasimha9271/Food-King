@@ -8,7 +8,8 @@ Food King is a dynamic restaurant listing application that displays currently av
 
 ## Demo Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/aO8QkgXSGvM?si=RCRTlyPA1NA9rmWD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![YouTube Video](https://img.youtube.com/vi/aO8QkgXSGvM/0.jpg)](https://www.youtube.com/watch?v=aO8QkgXSGvM)
+
 
 ## Table of Contents
 
